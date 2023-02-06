@@ -13,3 +13,9 @@ public protocol ControllerA {
 public protocol ControllerB {
     func method(foo: some Foo) -> Int
 }
+
+/// @mockable
+public protocol OpaqueReturnTypeProtocol {
+    func nonOptional(_ type: some Error) -> Int
+    func optional(_ type: (some Error)?)
+}
